@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="72"><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-custom-link"/><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-general-link"/><style xmlns="" lang="en" type="text/css" id="dark-mode-custom-style"/><style xmlns="" lang="en" type="text/css" id="dark-mode-native-style"/>
+
+ <g>
+  <title>Layer 1</title>
+  <line stroke="#FFF" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="10.4" x2="200" y1="10" x1="10" opacity="undefined" fill="none"/>
+  <line stroke="#FFF" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="60.4" x2="200" y1="60" x1="10" opacity="undefined" fill="none"/>
+ </g>
+</svg>

@@ -1,0 +1,21 @@
+[
+    {
+        "key":"cpp14",
+        "value":"C++ 14",
+        "versionIndex":"3",
+        "editor_key":"text/x-c++src"
+    },
+    {
+        "key":"nodejs",
+        "value":"NodeJS",
+        "versionIndex":"3",
+        "editor_key":"javascript"
+    },
+    {
+        "key":"python3",
+        "value":"Python 3",
+        "versionIndex":"3",
+        "editor_key":"python"
+    }
+
+]

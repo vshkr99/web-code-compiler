@@ -1,0 +1,186 @@
+@font-face{
+    font-family: 'Lucida Grande';
+    src: url('/LucidaGrande.a6701778.ttf') format("truetype");
+}
+
+body{
+    background-color: #1B4575;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #343434;
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius:10px;
+}
+
+.container{
+    padding: 16px;
+}
+
+.container__header{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.container__header-title{
+    font-family: Lucida Grande;
+    font-size: 32px;
+    color: white;
+}
+
+.container__header-options{
+    display: flex;
+}
+
+.container__header-option .select{
+    background-color: #07073B;
+    color: white;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.editor{
+    display: flex;
+    height: calc(100vh - 100px);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.editor .editor__components{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 16px; */
+    width: 50%;
+}
+
+.editor .editor__components .editor__component{
+    background-color: #07073B;
+    border: 4px solid #95ABD5;
+}
+
+.editor .editor__component .editor__input-input,
+.editor .editor__component .editor__output-output{
+    padding: 10px;
+    height: calc(100% - 50px);
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    line-height: 28px;
+    outline: none;
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+
+.editor__components .editor__code{
+    height: 90%;
+}
+
+.editor__components .editor__action{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.editor__components .editor__input,
+.editor__components .editor__output{
+    height: 50%;
+}
+
+
+.editor__component .editor__component-title{
+    background-color: rgba(0, 0, 0, 0.64);
+    width: calc(100% - 8px);
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 4px;
+    user-select: none;
+    height: 22px;
+}
+
+.editor__component .execute{
+    background-color: #212161;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 2px solid #333376;
+    cursor: pointer;
+}
+
+.editor__component .execute:hover{
+    opacity: 0.9;
+}
+
+.editor__component .process-results{
+    margin-left: 16px;
+}
+
+.editor__component .process-results .cpu-time{
+    color: red;
+}
+
+.editor__component .process-results .memory{
+    color: green;
+}
+
+.editor .resize.col{
+    display: flex;
+    align-items: center;
+    width: 26px;
+    border-radius: 32px;
+}
+
+.editor .resize.col:hover{
+    background-color: rgba(0, 0, 0, 0.13);
+    cursor: col-resize;
+}
+
+.editor .resize.col img{
+    width: 100%;
+    transform: rotate(90deg);  
+    user-select: none; 
+    -webkit-user-drag: none;
+}
+
+.editor .resize.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+    border-radius: 32px;
+}
+.editor .resize.row img{
+    height: 38%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.editor .resize.row:hover{
+    background-color: rgba(0, 0, 0, 0.13);
+    cursor: row-resize;
+}
+
+
+#editor{
+    height: calc(100% - 30px);
+    cursor: text;
+}
+
+#editor>.CodeMirror{
+    height: 100%;
+}
+
+/*# sourceMappingURL=/css.967bad95.css.map */

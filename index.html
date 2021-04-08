@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Code mirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/monokai.min.css" integrity="sha512-R6PH4vSzF2Yxjdvb2p2FA06yWul+U0PDDav4b/od/oXf9Iw37zl10plvwOXelrjV2Ai7Eo3vyHeyFUjhXdBCVQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.css" integrity="sha512-xIf9AdJauwKIVtrVRZ0i4nHP61Ogx9fSRAkCLecmE2dL/U8ioWpDvFCAy4dcfecN72HHB9+7FfQj3aiO68aaaw==" crossorigin="anonymous" />
+
+    <!-- fontawesome import -->
+    <script src="https://kit.fontawesome.com/11a11ea7d9.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="container__header">
+            <div class="container__header-title">Code Editor</div>
+            <div class="container__header-options">
+                <div class="container__header-option full_screen"></div>
+                <div class="container__header-option language_select">
+                    <select class="select language_select-drop"></select>
+                </div>
+                <div class="container__header-option language_select">
+                    <select class="select theme_select-drop"></select>
+                </div>
+            </div>
+        </div>
+        <div class="editor__wrapper">
+            <div class="editor">
+                <div class="editor__components left">
+                    <div class="editor__component editor__code">
+                        <div class="editor__component-title editor__code-title"><i class="fas fa-code"></i> Code</div>
+                        <div id="editor"></div>
+                    </div>
+                    <div draggable="false" class="resize row"><img draggable="false" src="assets/images/resize-bars.svg"></div>
+                    <div class="editor__component editor__action">
+                        <button class="execute">Execute <i class="fas fa-play"></i></button>
+                        <div class="process-results">
+                            <div class="cpu-time"></div>
+                            <div class="memory"></div>
+                        </div>
+                    </div>
+                </div>
+                <div draggable="false" class="resize col"><img draggable="false" src="assets/images/resize-bars.svg"></div>
+                <div class="editor__components right">
+                    <div class="editor__component editor__input">
+                        <div class="editor__component-title editor__code-title"><i class="fas fa-keyboard"></i> Input</div>
+                        <div class="editor__input-input" contenteditable="true"></div>
+                    </div>
+                    <div draggable="false" class="resize row"><img draggable="false" src="assets/images/resize-bars.svg"></div>
+                    <div class="editor__component editor__output">
+                        <div class="editor__component-title editor__code-title"><i class="fas fa-keyboard"></i> Output</div>
+                        <div class="editor__output-output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Code mirror CDNs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.js" integrity="sha512-hc0zo04EIwTzKLvp2eycDTeIUuvoGYYmFIjYx7DmfgQeZPC5N27sPG2wEQPq8d8fCTwuguLrI1ffatqxyTbHJw==" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/javascript/javascript.min.js" integrity="sha512-isTDQTpVc8nKKMQmhm0b6fccRPjzo2g0q6l2VLy9/jDn5s8bEUu9WuSGkkAfN/NCwI3+Qi5wEVCaPRoWvT6YPw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/python/python.min.js" integrity="sha512-jKm248sXyXbgbigmg1qdHZ7sKnQwpI2CW4Bv1DXbWHWcXRw7nafIjv8dxhbdt5wS0JGrwjxj+hBUEseM/PnjUA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/clike/clike.min.js" integrity="sha512-PeD3V/6m5bFv3qyIVKgDh+huybMHjvsLWuW7ZH5WZsS+hY0pZNU24si/Yja/2D4c/ff++c6k1S240dKwhJEJzw==" crossorigin="anonymous"></script>
+
+<!-- Themes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/3024-day.min.css" integrity="sha512-18oLgbbfP5aJEwUUaEBLD/e5HnJtTuPOmdevOgMWL8wdGn6zNVLY+yAgOupSfrbdT174IRJDdak3XeBqdYy7Jw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/3024-night.min.css" integrity="sha512-SbB0juc9/nEA5PEN7S+lnglc7wADe2DLKZKXn3D+eyebL06fTbFHNzgMlpX9oqFjWEKZ6uH7zNCUSv+j9Dpwpw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/eclipse.min.css" integrity="sha512-Gv0sGKOVrQcQjUHL+xd9Bpq5AvLKbcQMb8s4J1//caCLxqvj00CLJMzJlqnTHTCQbKFRpPHqzXteq6dSMs7PEw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/monokai.min.css" integrity="sha512-R6PH4vSzF2Yxjdvb2p2FA06yWul+U0PDDav4b/od/oXf9Iw37zl10plvwOXelrjV2Ai7Eo3vyHeyFUjhXdBCVQ==" crossorigin="anonymous" />
+
+<script src="index.js"></script>
+</html>
