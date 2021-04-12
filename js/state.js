@@ -23,7 +23,6 @@ const state=new Proxy({
                 break;
             // case "running":
             case 'result':
-                console.log(value);
                 displayResult(value);
                 break;
 

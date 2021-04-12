@@ -16,7 +16,6 @@
 const pr={
 	name:"Name",
 	set(state,key,value){
-		console.log("Set");
 		if(key==="name"){
 			console.log("Name being set");
 		}

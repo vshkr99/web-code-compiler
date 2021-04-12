@@ -63,6 +63,14 @@ export const attachEventListeners = () => {
 
     executeBtn.addEventListener("click",()=>{
         runCode();
-    })
+    });
+
+    // window.addEventListener('online',()=>{
+    //     window.alert("You're connected")
+    // })
+
+    // window.addEventListener('offline',()=>{
+    //     window.alert("You're disconnected")
+    // })
 
 }   

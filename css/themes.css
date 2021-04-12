@@ -1,0 +1,94 @@
+/* monokai theme */
+body.monokai{
+    background: #3e3f3d;
+}
+
+body.monokai .container__header-option .select{
+    background-color: #464b41;
+}
+
+body.monokai .editor .editor__components .editor__component{
+    background-color: #272822;
+    border: 4px solid #181818;
+}
+
+body.monokai .container__header-option .select{
+    background-color: #272822;
+    border: 1px solid black;
+}
+
+body.monokai .editor__component .execute{
+    box-shadow: 0 0 5px #404040;
+    background-color: #161615;
+}
+
+
+/* day theme */
+body.day{
+    background-color: #d2d3d3;
+}
+
+body.day .container__header-title{
+    color: black;
+}
+
+body.day .container__header{
+    color: black;
+}
+
+body.day .container__header-option .select{
+    background-color: #464b41;
+}
+
+body.day .editor .editor__components .editor__component{
+    background-color: #f7f7f7;
+    border: 4px solid #a8a8a8;
+}
+
+body.day .editor .editor__component .editor__input-input, 
+body.day .editor .editor__component .editor__output-output{
+    color: black;
+}
+
+body.day .editor__component .editor__component-title{
+    background-color: rgb(168 168 168);
+    color: black;
+}
+
+body.day .container__header-option .select{
+    background-color: #f7f7f7;
+    border: 1px solid #a8a8a8;
+    color: black;
+}
+
+body.day .editor__component .execute{
+    box-shadow: 0 0 5px #7c7c7c;
+    background-color: #d2d3d3;
+    color: black;
+}
+
+/* night theme */
+body.night{
+    background-color: #202020;
+}
+
+
+body.night .editor .editor__components .editor__component{
+    background-color: #090300;
+    border: 4px solid #282828;
+}
+
+body.night .editor__component .editor__component-title{
+    background-color: rgb(40 40 40);
+    color: white;
+}
+
+body.night .container__header-option .select{
+    background-color: #090300;
+    border: 1px solid #282828;
+}
+
+body.night .editor__component .execute{
+    box-shadow: 0 0 5px #404040;
+    background-color: #161615;
+}

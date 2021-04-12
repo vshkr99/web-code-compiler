@@ -911,16 +911,16 @@ module.exports = [{
 },{}],"assets/data/themes.json":[function(require,module,exports) {
 module.exports = [{
   "title": "Monokai",
-  "key": "monokai"
+  "key": "monokai",
+  "css_class": "monokai"
 }, {
   "title": "Day",
-  "key": "3024-day"
+  "key": "3024-day",
+  "css_class": "day"
 }, {
   "title": "Night",
-  "key": "3024-night"
-}, {
-  "title": "Eclipse",
-  "key": "eclipse"
+  "key": "3024-night",
+  "css_class": "night"
 }];
 },{}],"js/state.js":[function(require,module,exports) {
 "use strict";
@@ -961,7 +961,6 @@ var state = new Proxy({
       // case "running":
 
       case 'result':
-        console.log(value);
         (0, _actions.displayResult)(value);
         break;
     }
@@ -991,7 +990,11 @@ var codeMirror = CodeMirror(document.getElementById("editor"), {
   mode: _languages.default[0].editor_key,
   theme: _themes.default[0].key,
   lineNumbers: true
-});
+}); // initialize initial theme
+
+!function () {
+  document.querySelector("body").classList.add(_themes.default[0].css_class);
+}();
 
 var changeLanguage = function changeLanguage(mode) {
   codeMirror.setOption("mode", mode);
@@ -1030,7 +1033,10 @@ var languageChange = function languageChange(arg) {
 exports.languageChange = languageChange;
 
 var themeChange = function themeChange(arg) {
-  (0, _codemirror.changeTheme)(arg.key);
+  (0, _codemirror.changeTheme)(arg.key); // body theme update
+
+  document.querySelector("body").classList.remove(_state.default.theme.css_class);
+  document.querySelector("body").classList.add(arg.css_class);
 };
 
 exports.themeChange = themeChange;
@@ -1164,7 +1170,12 @@ var attachEventListeners = function attachEventListeners() {
   });
   executeBtn.addEventListener("click", function () {
     (0, _actions.runCode)();
-  });
+  }); // window.addEventListener('online',()=>{
+  //     window.alert("You're connected")
+  // })
+  // window.addEventListener('offline',()=>{
+  //     window.alert("You're disconnected")
+  // })
 };
 
 exports.attachEventListeners = attachEventListeners;
@@ -1264,7 +1275,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49761" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55878" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,18 +1,17 @@
 [
     {
         "title":"Monokai",
-        "key":"monokai"
+        "key":"monokai",
+        "css_class":"monokai"
     },
     {
         "title":"Day",
-        "key":"3024-day"
+        "key":"3024-day",
+        "css_class":"day"
     },
     {
         "title":"Night",
-        "key":"3024-night"
-    },
-    {
-        "title":"Eclipse",
-        "key":"eclipse"
+        "key":"3024-night",
+        "css_class":"night"
     }
 ]

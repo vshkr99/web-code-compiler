@@ -8,6 +8,11 @@ const codeMirror=CodeMirror(document.getElementById("editor"),{
     lineNumbers:true
 });   
 
+// initialize initial theme
+!function(){
+    document.querySelector("body").classList.add(themes[0].css_class);
+}()
+
 export const changeLanguage = (mode) =>{
     codeMirror.setOption("mode",mode);
 }

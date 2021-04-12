@@ -9,6 +9,10 @@ body{
     margin: 0;
 }
 
+.CodeMirror{
+    font-size: 18px;
+}
+
 ::-webkit-scrollbar {
     width: 4px;
 }
@@ -36,6 +40,8 @@ body{
     font-family: Lucida Grande;
     font-size: 32px;
     color: white;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .container__header-options{
@@ -49,6 +55,7 @@ body{
     padding: 8px 16px;
     border-radius: 8px;
     margin-left: 10px;
+    outline: none;
 }
 
 .editor{
@@ -114,10 +121,12 @@ body{
 .editor__component .execute{
     background-color: #212161;
     color: white;
-    padding: 10px 20px;
-    font-size: 20px;
-    border: 2px solid #333376;
+    padding: 12px 28px;
+    font-size: 18px;
+    border: none;
     cursor: pointer;
+    border-radius: 20px;
+    outline: none;
 }
 
 .editor__component .execute:hover{

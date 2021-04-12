@@ -7,6 +7,9 @@ export const languageChange = (arg) => {
 
 export const themeChange = (arg) => {
     changeTheme(arg.key);
+    // body theme update
+    document.querySelector("body").classList.remove(state.theme.css_class);
+    document.querySelector("body").classList.add(arg.css_class);
 }
 
 export const displayResult = (arg) => {
